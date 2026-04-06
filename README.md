@@ -13,7 +13,6 @@
 - [Parte 3 - Chat Multiplayer com Threads](#parte-3---chat-multiplayer-com-threads)
 - [Como Executar](#como-executar)
 - [Vídeos Demonstrativos](#vídeos-demonstrativos)
-- [Dificuldades Encontradas](#dificuldades-encontradas)
 
 ---
 
@@ -37,10 +36,10 @@ Chat básico onde um servidor e um cliente trocam mensagens em tempo real. O cha
 
 ### Características
 
-- ✅ Protocolo **TCP** (garante entrega e ordem das mensagens)
-- ✅ Porta definida pelos **primeiros 5 números do TIA** (exemplo: 12345)
-- ✅ Comunicação bidirecional (ambos enviam e recebem)
-- ✅ Encerramento elegante com comando `QUIT`
+- Protocolo **TCP** (garante entrega e ordem das mensagens)
+- Porta definida pelos **primeiros 5 números do TIA** (exemplo: 10419)
+- Comunicação bidirecional (ambos enviam e recebem)
+- Encerramento elegante com comando `QUIT`
 
 ### Como testar
 
@@ -94,7 +93,7 @@ python Cliente_variaConexao.py
 
 **Terminal 1 (Servidor):**
 ```text
-Servidor rodando em 0.0.0.0:5000
+Servidor rodando em 127.0.0.1:5000
 Ana conectou de ('127.0.0.1', 54321) - Total: 1
 Bruno conectou de ('127.0.0.1', 54322) - Total: 2
 Carlos conectou de ('127.0.0.1', 54323) - Total: 3
