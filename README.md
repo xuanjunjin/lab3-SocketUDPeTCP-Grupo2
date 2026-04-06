@@ -46,7 +46,6 @@ Chat básico onde um servidor e um cliente trocam mensagens em tempo real. O cha
 
 1. **Inicie o servidor:**
    ```bash
-   cd Parte2_chat
    python ServerTCP_chat.py
 
 2. **Em outro terminal, inicie o cliente:**
@@ -79,13 +78,12 @@ Um chat em grupo onde **múltiplos clientes** podem se conectar simultaneamente 
 
 1. **Inicie o servidor:**
    ```bash
-   cd questao3_multiplayer
    python Server_variaConexao.py
 
 
 2. **Em terminais separados, inicie os clientes:**
 ```bash
-python cliente_multiplayer.py
+python Cliente_variaConexao.py
 ```
 
 * Digite um apelido quando solicitado
@@ -118,18 +116,10 @@ Você: Oi Bruno!
 
 ## Como Executar
 
-### Teste local (mesma máquina)
-
-* Abra um terminal para o servidor
-* Abra quantos terminais quiser para os clientes
-* Use `IP = '127.0.0.1'` ou `IP = 'localhost'`
-
-### Teste em rede (máquinas diferentes)
-
 * No servidor: Descubra o IP local
   * Windows: `ipconfig`
   * Linux/Mac: `ifconfig` ou `ip addr`
-* No servidor: Configure `IP = '0.0.0.0'` (escuta em todas as interfaces)
+* No servidor: Configure `IP = 'IP_SERVIDOR'` (escuta em todas as interfaces)
 * Nos clientes: Configure `IP_SERVIDOR = 'IP_DO_SERVIDOR'`
 * Certifique-se que a porta está liberada no firewall
 
@@ -141,29 +131,3 @@ Você: Oi Bruno!
 |-------|----------|------|
 | Vídeo 1 | Questões 1 e 2 + demonstração do chat simples | Assistir no YouTube |
 | Vídeo 2 | Questão 3 - Chat multiplayer com threads | Assistir no YouTube |
-
----
-
-## Dificuldades Encontradas
-
-Durante o desenvolvimento da aplicação multiplayer (Questão 3), as principais dificuldades foram:
-
-### 1. Gerenciamento concorrente da lista de clientes
-
-* **Problema:** Múltiplas threads acessando a mesma lista ao mesmo tempo
-* **Solução:** Uso de `threading.Lock()` para sincronizar o acesso
-
-### 2. Broadcast sem bloquear o remetente
-
-* **Problema:** Enviar mensagem para todos, inclusive para quem enviou
-* **Solução:** Parâmetro `remetente` na função `broadcast`
-
-### 3. Detecção de desconexão inesperada
-
-* **Problema:** Cliente fechar terminal sem avisar
-* **Solução:** Bloco `try/except` no `recv()` para capturar exceções
-
-### 4. Threads "órfãs" após desconexão
-
-* **Problema:** Threads continuavam rodando mesmo após cliente sair
-* **Solução:** Configurar threads como `daemon=True`
