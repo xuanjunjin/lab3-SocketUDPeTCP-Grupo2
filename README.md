@@ -128,5 +128,5 @@ Você: Oi Bruno!
 
 | Vídeo | Conteúdo | Link |
 |-------|----------|------|
-| Vídeo 1 | Questões 1 e 2 + demonstração do chat simples | Assistir no YouTube |
-| Vídeo 2 | Questão 3 - Chat multiplayer com threads | Assistir no YouTube |
+| Vídeo 1 | Questões 1 e 2 + demonstração do chat simples | [Assistir no YouTube](https://youtu.be/AiKYmM3qpok?si=gYMX60ZyRhysT0Y-) |
+| Vídeo 2 | Questão 3 - Chat multiplayer com threads | [Assistir no YouTube](https://youtu.be/0ZvuosoCypU?si=-jj4u-y4OGycA1I9) |
